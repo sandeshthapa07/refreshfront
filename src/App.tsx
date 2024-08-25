@@ -8,7 +8,7 @@ function App() {
     password: "",
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log("Submit", data);
     const datad = await api.post("/login", data);
